@@ -1,0 +1,41 @@
+category_group_mapping:
+  type: string
+  default: ""
+  description: "Map category IDs to group names. Format: categoryId:groupName|categoryId:groupName (e.g., 5:team-members|10:moderators). Leave empty if using auto_match_by_slug."
+
+auto_match_by_slug:
+  type: bool
+  default: true
+  description: "Automatically match category slugs to group names. For example, category 'team-hub' will look for group 'team-hub'. Manual category_group_mapping takes priority for specific overrides."
+
+group_slug_prefix:
+  type: string
+  default: ""
+  description: "Optional prefix to add to category slug when auto-matching. For example, with prefix 'cat-', category 'team-hub' will look for group 'cat-team-hub'."
+
+group_slug_suffix:
+  type: string
+  default: ""
+  description: "Optional suffix to add to category slug when auto-matching. For example, with suffix '-members', category 'team-hub' will look for group 'team-hub-members'."
+
+members_per_page:
+  type: integer
+  default: 18
+  min: 6
+  max: 50
+  description: "Number of members to display when expanded (roughly 3 rows)"
+
+show_member_names:
+  type: bool
+  default: true
+  description: "Show member names below their avatars"
+
+card_title:
+  type: string
+  default: "Members"
+  description: "Title displayed at the top of the member directory card"
+
+show_member_count:
+  type: bool
+  default: true
+  description: "Show the total member count in the card title"
